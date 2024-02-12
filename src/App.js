@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import BottomMapComponent from './Components/BottomMapComponent';
 import TopComponent from './Components/TopComponent';
+import { api_key } from './api';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     fetch("https://api.ipify.org?format=json")
       .then(response => response.json())
       .then(data => {
-        fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_gATmUz1HjtCl4qMFyoGEzmsDdJvIv&ipAddress=${data.ip}`)
+        fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${api_key}&ipAddress=${data.ip}`)
           .then(response => response.json())
           .then(data => {
 
@@ -25,7 +26,7 @@ function App() {
 
   function checkIp() {
     if (ip?.length > 1) return
-    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_gATmUz1HjtCl4qMFyoGEzmsDdJvIv&ipAddress=${ip}`)
+    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${api_key}&ipAddress=${ip}`)
       .then(response => response.json())
       .then(data => {
         setData(data)
