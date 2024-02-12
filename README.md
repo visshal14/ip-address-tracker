@@ -15,6 +15,8 @@
 * Fork this project
 * Install npm packages
   ```npm i```
+* get your geoipify api from [geo.ipify.org](https://geo.ipify.org/docs)
+* change your API_Key in api.js in src folder 
 * Run react project start command
  ```npm start```
 
