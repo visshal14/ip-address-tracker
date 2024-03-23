@@ -1,4 +1,5 @@
 ## IP Address Tracker
+Locate your IP address with precision using this simple and efficient GitHub repository. Access real-time location data associated with your IP, empowering you to understand and manage your online presence effortlessly
 
 ## Technologies Used
 * ReactJs
